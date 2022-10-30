@@ -1,14 +1,29 @@
-package Models;
+package model;
 
 import java.util.ArrayList;
 import java.util.Date;
 
+/*
+This class is a parent class for Invoice Lines
+/ */
 public class InvoiceHeader {
    private int invoiceNum;
    private Date invoiceDate;
    private String customerName;
-   
-   ArrayList<InvoiceLine> invoiceLines;
+
+   double invoiceTotal;
+
+    @Override
+    public String toString() {
+        return "InvoiceHeader{" +
+                "invoiceNum=" + invoiceNum +
+                ", invoiceDate=" + invoiceDate +
+                ", customerName='" + customerName + '\'' +
+                ", invoiceTotal=" + invoiceTotal +
+                '}';
+    }
+
+    ArrayList<InvoiceLine> invoiceLines;
 
     public InvoiceHeader(int invoiceNum, Date invoiceDate, String customerName) {
         this.invoiceNum = invoiceNum;
@@ -38,5 +53,14 @@ public class InvoiceHeader {
 
     public void setCustomerName(String customerName) {
         this.customerName = customerName;
+    }
+
+    /**
+     * This method calculates the total price for all items purchased in the invoice
+     */
+    public double getInvoiceTotal(){
+       for(int line = 0; line<invoiceLines.size(); line++)
+           invoiceTotal += invoiceLines.get(line).getItemTotal();
+       return invoiceTotal;
     }
 }
