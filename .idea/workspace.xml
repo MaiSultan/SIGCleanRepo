@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c2b61a7-24ba-4dd4-998b-2cf133674405" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/model/HeaderColumns.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/InvoiceFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EnvironmentScreenShots/GitBash.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/FileOperations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/InvoiceHeaderSelectionListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/HeaderColumns.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/InvoiceHeader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/InvoiceHeader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/InvoiceLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/InvoiceLine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/InvoiceFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/InvoiceFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,11 +42,21 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;395&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/OneDrive - ISKRAEMECO, d.d/FWD_ProfessionalSWTesting/SWTest_Projects/SalesInvoiceGenProject&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\OneDrive - ISKRAEMECO, d.d\FWD_ProfessionalSWTesting\SWTest_Projects\SalesInvoiceGenProject\src" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="SalesInvoiceGenProject" />
       <method v="2">

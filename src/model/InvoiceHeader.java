@@ -1,5 +1,6 @@
 package model;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
@@ -9,7 +10,7 @@ This class is a parent class for Invoice Lines
 / */
 public class InvoiceHeader {
    private int invoiceNum;
-   private LocalDateTime invoiceDate;
+   private LocalDate invoiceDate;
    private String customerName;
 
    double invoiceTotal;
@@ -34,7 +35,7 @@ public class InvoiceHeader {
         this.invoiceLines = invoiceLines;
     }
 
-    public InvoiceHeader(int invoiceNum, LocalDateTime invoiceDate, String customerName) {
+    public InvoiceHeader(int invoiceNum, LocalDate invoiceDate, String customerName) {
         this.invoiceNum = invoiceNum;
         this.invoiceDate = invoiceDate;
         this.customerName = customerName;
@@ -48,11 +49,11 @@ public class InvoiceHeader {
         this.invoiceNum = invoiceNum;
     }
 
-    public LocalDateTime getInvoiceDate() {
+    public LocalDate getInvoiceDate() {
         return invoiceDate;
     }
 
-    public void setInvoiceDate(LocalDateTime invoiceDate) {
+    public void setInvoiceDate(LocalDate invoiceDate) {
         this.invoiceDate = invoiceDate;
     }
 

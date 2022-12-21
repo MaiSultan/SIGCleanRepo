@@ -5,6 +5,7 @@ This class is for recording each line in the invoice
 / */
 public class InvoiceLine {
 
+    private int invoiceNum;
     private String itemName;
     private double itemPrice;
     private int count;
@@ -45,6 +46,14 @@ public class InvoiceLine {
         this.count = count;
     }
 
+    public int getInvoiceNum(){
+        return invoiceNum;
+    }
+
+    public void setInvoiceNum(int invoiceNum){
+        this.invoiceNum = invoiceNum;
+    }
+
     /**
      * @return Retrieves the price of single item count
      */
@@ -55,7 +64,8 @@ public class InvoiceLine {
     /**
      * This constructor is to initialize a new invoice line given item name, its price and the item count
      */
-    public InvoiceLine(String itemName, double itemPrice, int count) {
+    public InvoiceLine(int invoiceNum, String itemName, double itemPrice, int count) {
+        this.invoiceNum = invoiceNum;
         this.itemName = itemName;
         this.itemPrice = itemPrice;
         this.count = count;
