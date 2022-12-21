@@ -7,6 +7,13 @@
     <list default="true" id="1c2b61a7-24ba-4dd4-998b-2cf133674405" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/EnvironmentScreenShots/GitBash.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RunOutputScreenShots/ConsolePrintedMessages(1).PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RunOutputScreenShots/ConsolePrintedMessages(2).PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RunOutputScreenShots/FirstRun_LoadInvoiceHeaderCSVFileIntoTable.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RunOutputScreenShots/SecondRun_SelectRecord_InvoiceHeader_DisplayItemsAndTotal.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RunOutputScreenShots/ThirdRun_SelectInvoiceHeaderRecord_SetItemsRecords_NonEditableTextFields.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/InvoiceHeader.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/InvoiceLine.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/controller/FileOperations.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/controller/InvoiceHeaderSelectionListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
