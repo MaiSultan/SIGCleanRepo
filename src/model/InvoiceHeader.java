@@ -10,7 +10,7 @@ This class is a parent class for Invoice Lines
 / */
 public class InvoiceHeader {
    private int invoiceNum;
-   private LocalDate invoiceDate;
+   private String invoiceDate;
    private String customerName;
 
    double invoiceTotal;
@@ -35,7 +35,7 @@ public class InvoiceHeader {
         this.invoiceLines = invoiceLines;
     }
 
-    public InvoiceHeader(int invoiceNum, LocalDate invoiceDate, String customerName) {
+    public InvoiceHeader(int invoiceNum, String invoiceDate, String customerName) {
         this.invoiceNum = invoiceNum;
         this.invoiceDate = invoiceDate;
         this.customerName = customerName;
@@ -49,11 +49,11 @@ public class InvoiceHeader {
         this.invoiceNum = invoiceNum;
     }
 
-    public LocalDate getInvoiceDate() {
+    public String getInvoiceDate() {
         return invoiceDate;
     }
 
-    public void setInvoiceDate(LocalDate invoiceDate) {
+    public void setInvoiceDate(String invoiceDate) {
         this.invoiceDate = invoiceDate;
     }
 

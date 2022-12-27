@@ -5,21 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c2b61a7-24ba-4dd4-998b-2cf133674405" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EnvironmentScreenShots/GitBash.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RunOutputScreenShots/ConsolePrintedMessages(1).PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RunOutputScreenShots/ConsolePrintedMessages(2).PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RunOutputScreenShots/FirstRun_LoadInvoiceHeaderCSVFileIntoTable.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RunOutputScreenShots/SecondRun_SelectRecord_InvoiceHeader_DisplayItemsAndTotal.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RunOutputScreenShots/ThirdRun_SelectInvoiceHeaderRecord_SetItemsRecords_NonEditableTextFields.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/InvoiceHeader.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/InvoiceLine.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/FileOperations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/InvoiceHeaderSelectionListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/InvoiceHeaderModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/InvoiceHeaderEntryFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/InvoiceItemsEntryFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/HeaderColumns.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SalesInvoiceGenProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SalesInvoiceGenProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InvoiceHeader.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/InvoiceHeader.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InvoiceLine.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/InvoiceLine.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/FileOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/FileOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/InvoiceHeaderSelectionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/InvoiceActionsListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/InvoiceHeader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/InvoiceHeader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/InvoiceLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/InvoiceLine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/InvoiceFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/InvoiceFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,16 +41,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;395&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/OneDrive - ISKRAEMECO, d.d/FWD_ProfessionalSWTesting/SWTest_Projects/SalesInvoiceGenProject&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "true",
+    "Repository.Attach.Annotations": "true",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "395",
+    "last_opened_file_path": "D:/OneDrive - ISKRAEMECO, d.d/FWD_ProfessionalSWTesting/SWTest_Projects/SalesInvoiceGenProject",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.general"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\OneDrive - ISKRAEMECO, d.d\FWD_ProfessionalSWTesting\SWTest_Projects\SalesInvoiceGenProject\src" />
@@ -97,5 +99,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
