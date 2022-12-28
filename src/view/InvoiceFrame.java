@@ -69,6 +69,8 @@ Object[][] data_InvoiceHeader;
         //Set JTable Invoice Header to dynamic data model
         invoiceHeaderModel = new DefaultTableModel(cols_InvoiceHeader, 0);
         invoiceHeaderTable = new JTable(invoiceHeaderModel);
+        invoiceHeaderTable.setRowSelectionAllowed(true);
+        invoiceHeaderTable.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 
         //Create Menu bar
         JMenuBar menuBarInvoice = new JMenuBar();
@@ -113,10 +115,7 @@ Object[][] data_InvoiceHeader;
         panelLeft_InvoiceHeader.add(btnCreateInvoice);
         panelLeft_InvoiceHeader.add(btnDeleteInovice);
 
-        add(panelLeft_InvoiceHeader);//1st Try
-
-
-
+        add(panelLeft_InvoiceHeader);
 
         JLabel invNoLbl = new JLabel("Invoice Number");
         tfInvoiceNoVal = new JTextField("",30);
@@ -145,9 +144,6 @@ Object[][] data_InvoiceHeader;
 
         panel_invoiceFields.add(invTotalLbl);
         panel_invoiceFields.add(tfInvTotalVal);
-
-
-
 
         //Invoice Data Columns names
         JPanel panel_invoiceItems = new JPanel();
@@ -179,7 +175,7 @@ Object[][] data_InvoiceHeader;
 
         add(panel_invoiceFields);
 
-//Adding a listener to table rows when click on any of them
+        //Adding a listener to table rows when click on any of them
         final String[] selectedInvoiceNo = {"0"};
         AtomicInteger selectedRowIndex = new AtomicInteger();
         invoiceHeaderTable.getSelectionModel().addListSelectionListener(event -> {
@@ -203,7 +199,6 @@ Object[][] data_InvoiceHeader;
             }
 
             System.out.println(selectedFile_Items);
-            //invoiceLinesArr = operations.loadInvoiceLinesByInvoiceNo(selectedInvoiceNo[0], invoiceLinesFile);
             invoiceLinesArr = operations.loadInvoiceLinesByInvoiceNo(selectedInvoiceNo[0], selectedFile_Items);
             int invoiceTotal = 0;
             //Load the read inovice headers in invoice header table
@@ -242,9 +237,6 @@ Object[][] data_InvoiceHeader;
                 tfInvTotalVal.setText("0");
                 tfInvDate.setText(invoiceHeaderTable.getValueAt(selectedRowIndex.get(), 1).toString());
                 tfCustName.setText(invoiceHeaderTable.getValueAt(selectedRowIndex.get(), 2).toString());
-
-                //Load invoice lines from its data model
-
 
             }
         });
@@ -289,6 +281,7 @@ Object[][] data_InvoiceHeader;
 
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy", Locale.US);
                 LocalDate localDate = LocalDate.parse(tfDateValue, formatter);//For reference
+                System.out.println("The invoice date after format : " + localDate.toString());
                 //String formattedStringInvoiceDate = localDate.format(formatter);
 
                /* DateTimeFormatter df = DateTimeFormatter.ofPattern("dd-MM-yyyy");
@@ -301,10 +294,9 @@ Object[][] data_InvoiceHeader;
                 String[] dateArrayReversed =reverseArray(dateArray);*/
 
                 invoiceData = new String[]{String.valueOf(rowCount), tfDateValue, tfCustomerValue};
-                System.out.println("The invoice date after format : " + localDate.toString());
                 //invoiceFrame.invoiceHeaderModel.addRow(invoiceData);
                 System.out.println("The Invoice Header model is " + invoiceHeaderModel);
-                invoiceHeaderTableModel.addRow(invoiceData);
+                invoiceHeaderModel.addRow(invoiceData);
                 invoiceHeaderTable.setModel(invoiceHeaderModel);
 
                 break;
@@ -377,7 +369,7 @@ Object[][] data_InvoiceHeader;
                                                  tfItemPriceValue,
                                                  tfItemCountValue,
                                                  String.valueOf(Double.parseDouble(tfItemPriceValue) * Integer.parseInt(tfItemCountValue))};
-                //invoiceFrame.invoiceHeaderModel.addRow(invoiceData);
+
                 System.out.println("The Invoice Items model is " + invoiceItemsModel);
                 invoiceItemsModel.addRow(itemData);
                 tbl_invoiceItems.setModel(invoiceItemsModel);
@@ -558,7 +550,7 @@ Object[][] data_InvoiceHeader;
                 break;
 
             case "DeleteInvoice":
-                if(invoiceHeaderTable.getSelectedRow() != 1) {
+                if(invoiceHeaderTable.getSelectedRow() != -1) {
                     // remove selected row from the model
 
                     int result =JOptionPane.showConfirmDialog(this, "Are you sure to delete this invoice?", "Delete Invoice", JOptionPane.OK_CANCEL_OPTION);
@@ -566,8 +558,10 @@ Object[][] data_InvoiceHeader;
                         try {
                             int numRows = invoiceHeaderTable.getSelectedRows().length;
                             for(int i=0; i<numRows ; i++ ) {
-
-                                invoiceHeaderModel.removeRow(invoiceHeaderTable.getSelectedRow());
+                                //Consider that the table's model has different indexing compared to the invoice header table, getSelectedRow()-1
+                                invoiceHeaderModel.removeRow(invoiceHeaderTable.getSelectedRow()-1);
+                                invoiceHeaderTable.setModel(invoiceHeaderModel);
+                                invoiceHeaderTable.updateUI();
                             }
                             JOptionPane.showMessageDialog(null, "Selected row deleted successfully");
 
@@ -607,7 +601,7 @@ Object[][] data_InvoiceHeader;
                                 JOptionPane.showMessageDialog(null, "Selected row deleted successfully");
 
                         } catch (Exception ex) {
-                            JOptionPane.showMessageDialog(null, ex.getMessage());
+                            JOptionPane.showMessageDialog(null, "Exception raised while trying to remove invoice record "+ ex.getMessage());
                         }
                     } else if (result == JOptionPane.CANCEL_OPTION) {
                         System.exit(0);

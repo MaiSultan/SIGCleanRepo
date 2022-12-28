@@ -1,18 +1,11 @@
 package controller;
 
-import model.InvoiceHeader;
-import model.InvoiceHeaderModel;
 import view.InvoiceFrame;
 import view.InvoiceHeaderEntryFrame;
 
 import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableModel;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.time.LocalDate;
-import java.util.Arrays;
 
 public class InvoiceActionsListener implements ActionListener {
 
