@@ -5,16 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c2b61a7-24ba-4dd4-998b-2cf133674405" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/model/InvoiceHeaderModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/InvoiceHeaderEntryFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/InvoiceItemsEntryFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_opencsv_opencsv_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_text_1_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SalesInvoiceGenProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SalesInvoiceGenProject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/InvoiceHeader.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/InvoiceHeader.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/InvoiceLine.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/InvoiceLine.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/FileOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/FileOperations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/InvoiceHeaderSelectionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/InvoiceActionsListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/InvoiceHeader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/InvoiceHeader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/InvoiceFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/InvoiceFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,14 +41,24 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="2GpFl6NpD6kldEZPBgieUBTRoef" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "Downloaded.Files.Path.Enabled": "true",
     "Repository.Attach.Annotations": "true",
     "Repository.Attach.JavaDocs": "true",
@@ -51,8 +67,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "395",
-    "last_opened_file_path": "D:/OneDrive - ISKRAEMECO, d.d/FWD_ProfessionalSWTesting/SWTest_Projects/SalesInvoiceGenProject",
-    "project.structure.last.edited": "Project",
+    "last_opened_file_path": "D:/OneDrive - ISKRAEMECO, d.d/FWD_ProfessionalSWTesting/SWTest_Projects/E-CommerceAppAutomation",
+    "project.structure.last.edited": "Global Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.general"
@@ -99,6 +115,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -3,14 +3,10 @@ package view;
 import controller.FileOperations;
 import controller.InvoiceActionsListener;
 import model.InvoiceHeader;
-import model.InvoiceHeaderModel;
 import model.InvoiceLine;
 
-import javax.lang.model.element.Element;
 import javax.swing.*;
 import javax.swing.border.Border;
-import javax.swing.event.TableModelEvent;
-import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -18,15 +14,11 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.text.DateFormat;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.time.Month;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.*;
-import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class InvoiceFrame extends JFrame implements ActionListener{
@@ -293,15 +285,23 @@ Object[][] data_InvoiceHeader;
                     rowCount ++;
                 }
                 System.out.println("Row count is : " + rowCount);
-                DateTimeFormatter df = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-                LocalDate invoiceDateFormatted = LocalDate.parse(tfDateValue, df);
-                System.out.println(invoiceDateFormatted);
+
+
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy", Locale.US);
+                LocalDate localDate = LocalDate.parse(tfDateValue, formatter);//For reference
+                //String formattedStringInvoiceDate = localDate.format(formatter);
+
+               /* DateTimeFormatter df = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+                LocalDate invoiceDateFormatted = LocalDate.parse(tfDateValue, df);*/
 
                /* DateFormat df = new SimpleDateFormat("dd-MM-yyyy");
                 Date date = df.parse(tfDateValue);*/
+               /*String[] dateArray =new String[] {localDate.toString()};
+                System.out.println("The invoice date after format : " + dateArray.toString());
+                String[] dateArrayReversed =reverseArray(dateArray);*/
 
-                invoiceData = new String[]{String.valueOf(rowCount), invoiceDateFormatted.toString(), tfCustomerValue};
-                System.out.println(invoiceDateFormatted.toString());
+                invoiceData = new String[]{String.valueOf(rowCount), tfDateValue, tfCustomerValue};
+                System.out.println("The invoice date after format : " + localDate.toString());
                 //invoiceFrame.invoiceHeaderModel.addRow(invoiceData);
                 System.out.println("The Invoice Header model is " + invoiceHeaderModel);
                 invoiceHeaderTableModel.addRow(invoiceData);
@@ -311,6 +311,20 @@ Object[][] data_InvoiceHeader;
            /* case JOptionPane.CANCEL_OPTION:
                 JOptionPane.*/
         }
+    }
+
+    /*
+    This method reverse the order of formatted date to be in the form of dd-MM-yyyy
+     */
+    public static String[] reverseArray(String[] dateArray){
+        for (int left = 0, right = dateArray.length - 1;
+             left < right; left++, right--) {
+            // swap the values at the left and right indices
+            String temp = dateArray[left];
+            dateArray[left] = dateArray[right];
+            dateArray[right] = temp;
+        }
+        return dateArray;
     }
 
     public void AddNewItem(int invoiceNo){
